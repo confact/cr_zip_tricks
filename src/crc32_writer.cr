@@ -2,7 +2,7 @@ require "digest/crc32"
 
 class ZipTricks::CRC32Writer < IO
   getter count = 0_u32
-  getter crc32 : Digest::CRC32 = Digest::CRC32.initial
+  getter crc32 : UInt32 = Digest::CRC32.initial
   getter io : IO
 
   def initialize(io : IO)
